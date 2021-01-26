@@ -1,0 +1,62 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon" [btntext]="btntext"></app-page-title>
+
+
+
+  
+  <div class="main-card mb-3 card">
+    <div class="card-header">
+      
+        <div  class="btn-actions-pane-right" >   
+
+            <div role="group" class="btn-group-sm btn-group filters">
+               <!-- <button class="active btn btn-focus">Last Week</button>
+               <button class="btn btn-focus">All Month</button> -->
+               <div class="search ">
+                 <input type="text" value="" placeholder="Search.." class="form-control">
+               </div>
+             </div>
+             </div>
+    </div>
+    <div class="table-responsive">
+      <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+        <thead>
+          <tr>
+            <th >ID</th>
+            <th >Org Name</th>
+            <th >Org Number</th>
+            <th >Org Email</th>
+            <th>Contact Name</th>
+            <th >Contact Phone</th>
+            <th >Contact Email</th>
+            <th >GST</th>
+            <th >Address</th>
+            <th >Location</th>
+            <th >AssignedTo</th> 
+            <th >InCorporated</th> 
+            <th class="actiontd">Action</th> 
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of clients; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ client.orgname }}</td>
+                <td>{{ client.orgphone }}</td>
+                <td>{{ client.orgemail }}</td>
+                <td>{{ client.name }}</td>
+                <td>{{ client.phone }}</td>
+                <td>{{ client.email }}</td>
+                <td>{{ client.gst }}</td>
+                <td>{{ client.address }}</td>
+                <td>{{ client.location }}</td>
+                <td>{{ client.assignedto.name }}</td>
+                <td>{{ client.incorporated }}</td>
+                <td><button class="btn btn-primary btn-sm btn-block mb-2 "><i class="fa fa-edit"></i> Edit</button> <button class="btn btn-danger btn-sm btn-block mb-2"><i class="fa fa-trash"></i> Remove</button>   </td>
+                
+              </tr>
+         
+        </tbody>
+      </table>
+    </div>
+   
+  </div>
+   

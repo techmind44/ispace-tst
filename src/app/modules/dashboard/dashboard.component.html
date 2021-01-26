@@ -1,0 +1,187 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon"></app-page-title>
+
+<div class="mb-3 card">
+  <div class="card-header-tab card-header">
+    <div class="card-header-title font-size-lg text-capitalize font-weight-normal">
+      <i class="header-icon lnr-charts icon-gradient bg-happy-green"> </i>
+      Portfolio Performance
+    </div>
+    <div class="btn-actions-pane-right text-capitalize">
+      <button class="btn-wide btn-outline-2x mr-md-2 btn btn-outline-focus btn-sm">View All</button>
+    </div>
+  </div>
+  <div class="no-gutters row">
+    <div class="col-sm-6 col-md-4 col-xl-4">
+      <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
+        <div class="icon-wrapper rounded-circle">
+          <div class="icon-wrapper-bg opacity-10 bg-warning"></div>
+          <i class="lnr-laptop-phone text-dark opacity-8"></i>
+        </div>
+        <div class="widget-chart-content">
+          <div class="widget-subheading">Cash Deposits</div>
+          <div class="widget-numbers">1,7M</div>
+          <div class="widget-description opacity-8 text-focus">
+            <div class="d-inline text-danger pr-1">
+              <fa name="angle-down"></fa>
+              <span class="pl-1">54.1%</span>
+            </div>
+            less earnings
+          </div>
+        </div>
+      </div>
+      <div class="divider m-0 d-md-none d-sm-block"></div>
+    </div>
+    <div class="col-sm-6 col-md-4 col-xl-4">
+      <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
+        <div class="icon-wrapper rounded-circle">
+          <div class="icon-wrapper-bg opacity-9 bg-danger"></div>
+          <i class="lnr-graduation-hat text-white"></i>
+        </div>
+        <div class="widget-chart-content">
+          <div class="widget-subheading">Invested Dividents</div>
+          <div class="widget-numbers"><span>9M</span></div>
+          <div class="widget-description opacity-8 text-focus">
+            Grow Rate:
+            <span class="text-info pl-1">
+              <fa name="angle-down"></fa>
+              <span class="pl-1">14.1%</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="divider m-0 d-md-none d-sm-block"></div>
+    </div>
+    <div class="col-sm-12 col-md-4 col-xl-4">
+      <div class="card no-shadow rm-border bg-transparent widget-chart text-left">
+        <div class="icon-wrapper rounded-circle">
+          <div class="icon-wrapper-bg opacity-9 bg-success"></div>
+          <i class="lnr-apartment text-white"></i>
+        </div>
+        <div class="widget-chart-content">
+          <div class="widget-subheading">Capital Gains</div>
+          <div class="widget-numbers text-success"><span>$563</span></div>
+          <div class="widget-description text-focus">
+            Increased by
+            <span class="text-warning pl-1">
+              <fa name="angle-up"></fa>
+              <span class="pl-1">7.35%</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center d-block p-3 card-footer">
+    <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-primary btn-lg">
+      <span class="mr-2 opacity-7">
+        <i class="icon icon-anim-pulse ion-ios-analytics-outline"></i>
+      </span>
+      <span class="mr-1">View Complete Report</span>
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-xl-3">
+    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-success border-success">
+      <div class="widget-chat-wrapper-outer">
+        <div class="widget-chart-content pt-3 pl-3 pb-1">
+          <div class="widget-chart-flex">
+            <div class="widget-numbers">
+              <div class="widget-chart-flex">
+                <div class="fsize-4">
+                  <small class="opacity-5">$</small>
+                  <span>874</span></div>
+              </div>
+            </div>
+          </div>
+          <h6 class="widget-subheading mb-0 opacity-5">sales last month</h6>
+        </div>
+        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
+          <div class="col-md-12">
+            <ngx-trend height="80" strokeLinecap="round" stroke="var(--success)" strokeWidth="4" smooth="true"
+              radius="15" [data]="[0, 10, 5, 22, 3.6, 11]" autoDraw="true" autoDrawDuration="1500"
+              autoDrawEasing="ease-in"></ngx-trend>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-primary border-primary">
+      <div class="widget-chat-wrapper-outer">
+        <div class="widget-chart-content pt-3 pl-3 pb-1">
+          <div class="widget-chart-flex">
+            <div class="widget-numbers">
+              <div class="widget-chart-flex">
+                <div class="fsize-4">
+                  <small class="opacity-5">$</small>
+                  <span>1283</span></div>
+              </div>
+            </div>
+          </div>
+          <h6 class="widget-subheading mb-0 opacity-5">Sales Income</h6>
+        </div>
+        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
+          <div class="col-md-12">
+            <ngx-trend height="80" strokeLinecap="round" stroke="var(--primary)" strokeWidth="4" smooth="true"
+              radius="15" [data]="[120, 149, 193.4, 200, 92]" autoDraw="true" autoDrawDuration="1500"
+              autoDrawEasing="ease-in"></ngx-trend>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-warning border-warning">
+      <div class="widget-chat-wrapper-outer">
+        <div class="widget-chart-content pt-3 pl-3 pb-1">
+          <div class="widget-chart-flex">
+            <div class="widget-numbers">
+              <div class="widget-chart-flex">
+                <div class="fsize-4">
+                  <small class="opacity-5">$</small>
+                  <span>1286</span></div>
+              </div>
+            </div>
+          </div>
+          <h6 class="widget-subheading mb-0 opacity-5">last month sales</h6>
+        </div>
+        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
+          <div class="col-md-12">
+            <ngx-trend height="80" strokeLinecap="round" stroke="var(--warning)" strokeWidth="4" smooth="true"
+              radius="15" [data]="[3, 7, 6, 16, 3.6, 23]" autoDraw="true" autoDrawDuration="1500"
+              autoDrawEasing="ease-in"></ngx-trend>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-xl-3">
+    <div class="card mb-3 widget-chart widget-chart2 text-left card-btm-border card-shadow-danger border-danger">
+      <div class="widget-chat-wrapper-outer">
+        <div class="widget-chart-content pt-3 pl-3 pb-1">
+          <div class="widget-chart-flex">
+            <div class="widget-numbers">
+              <div class="widget-chart-flex">
+                <div class="fsize-4">
+                  <small class="opacity-5">$</small>
+                  <span>564</span></div>
+              </div>
+            </div>
+          </div>
+          <h6 class="widget-subheading mb-0 opacity-5">total revenue</h6>
+        </div>
+        <div class="no-gutters widget-chart-wrapper mt-3 mb-3 pl-0 he-auto row">
+          <div class="col-md-12">
+            <ngx-trend height="80" strokeLinecap="round" stroke="var(--danger)" strokeWidth="4" smooth="true"
+              radius="15" [data]="[0, 10, 5, 22, 3.6, 11]" autoDraw="true" autoDrawDuration="1500"
+              autoDrawEasing="ease-in"></ngx-trend>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

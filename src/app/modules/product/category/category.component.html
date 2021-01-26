@@ -1,0 +1,38 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon" [btntext]="btntext"></app-page-title>
+
+<div class="card main-card mb-3">
+    <div class="card-header">
+      <div  class="btn-actions-pane-right" >   
+
+       <div role="group" class="btn-group-sm btn-group filters">
+          <!-- <button class="active btn btn-focus">Last Week</button>
+          <button class="btn btn-focus">All Month</button> -->
+          <div class="search ">
+            <input type="text" value="" placeholder="Search.." class="form-control">
+          </div>
+        </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+       
+      <thead>
+        <tr >
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categories; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>
+            
+            {{ category.name }}
+          </td>
+          <td><button class="btn btn-primary mr-2"><i class="fa fa-edit"></i> Edit</button> <button class="btn btn-danger"><i class="fa fa-trash"></i> Remove</button>   </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>

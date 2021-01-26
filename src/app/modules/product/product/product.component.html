@@ -1,0 +1,52 @@
+<app-page-title [heading]="heading" [subheading]="subheading" [icon]="icon" [btntext]="btntext"></app-page-title>
+
+
+
+  
+  <div class="main-card mb-3 card">
+    <div class="card-header">
+      
+        <div  class="btn-actions-pane-right" >   
+
+            <div role="group" class="btn-group-sm btn-group filters">
+               <!-- <button class="active btn btn-focus">Last Week</button>
+               <button class="btn btn-focus">All Month</button> -->
+               <div class="search ">
+                 <input type="text" value="" placeholder="Search.." class="form-control">
+               </div>
+             </div>
+             </div>
+    </div>
+    <div class="table-responsive">
+      <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+        <thead>
+          <tr>
+            <th >ID</th>
+            <th >Product Name</th>
+            <th >Part Number</th>
+            <th>Category</th>
+            <th >HSN Code</th>
+            <th >Units</th>
+            <th >QtyPerCase</th>
+            <th >Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ product.name }}</td>
+                <td>{{ product.partnumber }}</td>
+                <td>{{ product.category.name }}</td>
+                <td>{{ product.hsncode }}</td>
+                <td>{{ product.units }}</td>
+                <td>{{ product.qtypercase }}</td>
+                <td><button class="btn btn-primary mr-2"><i class="fa fa-edit"></i> Edit</button> <button class="btn btn-danger"><i class="fa fa-trash"></i> Remove</button>   </td>
+                
+              </tr>
+         
+        </tbody>
+      </table>
+    </div>
+   
+  </div>
+   

@@ -1,0 +1,125 @@
+<div class="h-100">
+    <div class="row h-100 no-gutters">
+      <div class="h-100 d-md-flex d-sm-block bg-white justify-content-center align-items-center col-md-12 col-lg-7">
+        <div class="mx-auto app-login-box col-sm-12 col-md-10 col-lg-9">
+          <div class="app-logo"></div>
+          <h4>
+            <div>Welcome,</div>
+            <span>It only takes a <span class="text-success">few seconds</span> to create your account</span>
+          </h4>
+          <div>
+            <form #f="ngForm" (ngSubmit)="submit(f)">
+              <div class="row">  
+                <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                  <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                      <ng-template matStepLabel>Organisation Details</ng-template>
+                      <div class="col-md-4">
+                      <mat-form-field>
+                        <mat-label>Organisation Name</mat-label>
+                        <input matInput placeholder="Organisation Name" formControlName="orgname" required id="orgname">
+                      </mat-form-field>
+                      </div>
+                      
+                      <div class="col-md-4">
+                      <mat-form-field>
+                        <mat-label>Contact Name</mat-label>
+                        <input matInput placeholder="Contact Name" formControlName="name" required id="contactname">
+                      </mat-form-field>
+                      </div>
+  
+                      <div class="col-md-4">
+                      <mat-form-field>
+                        <mat-label>Phone No.</mat-label>
+                        <input matInput placeholder="Phone No." 
+                        formControlName="phone" required id="contactphone">
+                      </mat-form-field>
+                      </div>
+  
+                      <div class="col-md-4">
+                        <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email" required id="contactemail">
+                      </mat-form-field>
+                      </div>
+  
+                      <div class="col-md-4">
+                        <mat-form-field>
+                        <mat-label>Location</mat-label>
+                        <input matInput placeholder="Location" formControlName="location" required id="location">
+                      </mat-form-field>
+                      </div>
+                      <div>
+                        <button (click)="getOtp(stepper)">Next</button>
+                      </div>
+                    </form>                  
+                  </mat-step>
+  
+                  <mat-step [stepControl]="secondFormGroup">
+                    <form [formGroup]="secondFormGroup">
+                      <ng-template matStepLabel>Enter OTP</ng-template>
+                      <h4>Please enter the OTP received on your Phone Number</h4>
+                      <mat-form-field>
+                        <mat-label>Enter OTP</mat-label>
+                        <input matInput formControlName="otp" placeholder="Enter OTP"
+                               required>
+                      </mat-form-field>
+                      <div>
+                        <button (click)="goBack(stepper)">Back</button>
+                        <button (click)="validateOTP(stepper)">Next</button>
+                      </div>
+                    </form>
+                  </mat-step>
+  
+                  <mat-step>
+                    <ng-template matStepLabel>Email Confirmation</ng-template>
+                    <h4>Please check you mail to activate your account.
+                    </h4>
+                    <!-- <div>
+                      <button mat-button matStepperPrevious>Back</button>
+                      <button mat-button (click)="stepper.reset()">Reset</button>
+                    </div> -->
+                  </mat-step>
+                </mat-horizontal-stepper>          
+              </div>
+             
+              <!-- <div class="custom-control custom-checkbox"><input id="exampleCheck" type="checkbox" name="check"
+                  autocomplete="off" class="custom-control-input" value="true"><label for="exampleCheck"
+                  class="custom-control-label">
+                  Accept our <a [routerLink]="">Terms and Conditions</a>.
+                </label></div> -->
+              <div class="mt-4 d-flex align-items-center">
+                <h5 class="mb-0">
+                  Already have an account?
+                  <a [routerLink]="" class="text-primary">Sign in</a></h5>
+                <div class="ml-auto">
+                  <button type="button"
+                    class="btn btn-wide btn-pill btn-shadow btn-hover-shine btn-secondary btn-lg"
+                    [disabled]="!f.valid">
+                    Create Account
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="d-lg-flex d-xs-none col-lg-5">
+        <div class="slider-light">
+          <ngx-slick-carousel class="slick-slider slick-dotted" #slickModal="slick-carousel" [config]="slideConfig2">
+            <div ngxSlickItem>
+              <div class="position-relative h-100 d-flex justify-content-center align-items-center bg-plum-plate">
+                <div class="slider-content text-light">
+                  <h3>Workforce</h3>
+                  <p>
+                    Workforce is like a dream. Some think it's too good to be true! Extensive collection of
+                    unified Vue Bootstrap Components and Elements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ngx-slick-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
